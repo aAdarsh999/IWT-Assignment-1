@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            height: 100%;
+            max-height: 1000px;
+            width: 100%;
+            max-width: 2000px;
+        }
+/* 
+        .container img {
+           
+
+        } */
+
+        /* body {
+            background-color: black;
+        } */
+
+        h2 {
+            color: rgb(11, 11, 11);
+            font-size: 30px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        input {
+            border-radius: 10px;
+            height: 35px;
+            width: 250px;
+            top: 10px;
+            bottom: 20px;
+            border-color: antiquewhite;
+            grid-template-areas: "overlap";
+        }
+
+        .container button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-120%, 1160%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: rgb(5, 68, 136);
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .container .btn1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(0%, 1160%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: rgb(5, 68, 136);
+            color: rgb(255, 255, 255);
+            /* font-size: 20px; */
+            padding: 12px 14px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .container input {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-30%, 760%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: rgb(220, 229, 196);
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            padding: 12px 14px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .container h2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-170%, 730%);
+            -ms-transform: translate(-50%, -50%);
+            color:  rgb(5, 68, 136);
+            /* font-size: 16px; */
+            padding: 12px 14px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .container a {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(0%, 780%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: rgb(5, 68, 136);
+            color: rgb(255, 255, 255);
+            /* font-size: 20px; */
+            padding: 12px 14px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+
+        button {
+            height: 45px;
+            width: 125px;
+            position: absolute;
+            left: 150px;
+            top: 20px;
+            font-size: 50px;
+            border-radius: 20px;
+            /* background-color: darkgoldenrod; */
+            color: white;
+        }
+
+        button:hover {
+            color: gainsboro;
+        }
+
+        a {
+            height: 40px;
+            width: 125px;
+            position: absolute;
+            left: 150px;
+            top: 20px;
+            font-size: 18px;
+            border-radius: 20px;
+            /* background-color: darkgoldenrod; */
+            color: white;
+            text-decoration: none;
+        }
+
+        /* img {
+            position: absolute;
+            left: 420px; 
+            top: 250px;
+            height: 230px;
+            width: 500px;
+            grid-template-areas: "overlap";
+        } */
+        img {
+            position: absolute;
+            left: 330px;
+            /* top: 50px; */
+            height: 450px;
+            width: 800px;
+            grid-template-areas: "overlap";
+        }
+    </style>
+    <link rel="stylesheet" href="./form-to-json.css" type="text/css">
+</head>
+
+<body>
+    <div class="container"> </div>
+    <div class="container">
+        <img src="Flashcards.jpg">        
+        <h2 >Name: </h2>
+        <input id="name"><br>
+        <button onclick="store()">Submit</button><br>
+        <button class="btn1" onclick="start()">Play</button><br>
+        <!-- <a href="index.js">Play</a><br> -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./form-to-json.js"></script>
+    <script src="./script.js"></script>
+    <script src="./index.js"></script>
+
+</body>
+
+</html>

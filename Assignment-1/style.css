@@ -1,0 +1,341 @@
+/*Flipcard effect created with the help of w3 schools - i know there is an easier wat but dont have the time*/
+/*navbar with the help of w3 schools*/
+@keyframes load-cards {
+	from {
+		transform: scaleX(0);
+	}
+	to {
+		transform: scaleX(1);
+	}
+}
+* {
+	box-sizing: border-box;
+}
+main {
+	width: 100%;
+}
+body {
+	background: #fff;
+}
+.navbar {
+	overflow: hidden;
+	background-color: rgb(5, 68, 136);
+	font-family: Arial;
+	width: 100%;
+}
+.navbar a {
+	float: left;
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+.linkbtn {
+	width: 100%;
+}
+.dropdown .dropbtn,
+.linkbtn {
+	font-size: 16px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 14px 16px;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+}
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+	background-color: rgb(43, 4, 115);
+	transition: ease 0.3s;
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: rgb(5, 68, 136);
+	/* color: white; */
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px grey;
+	z-index: 1;
+}
+.dropdown-content a,
+.linkbtn {
+	float: none;
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+.dropdown-content a:hover,
+.linkbtn:hover {
+	background-color: rgb(43, 4, 115);
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+	transition: ease 1s;
+}
+.top {
+	display: flex;
+	justify-content: center;
+}
+.topics {
+	display: inline-flex;
+}
+.difficulty {
+	/* color: rgb(5, 68, 136) */
+	display: flex;
+	justify-content: center;
+	margin: 50px 0;
+}
+.easy,
+.medium,
+.hard {
+	font-size: 15px;
+	width: 148px;
+	height: 33px;
+}
+.medium {
+	margin: 0 50px;
+}
+.card-container {
+	perspective: 1000px;
+	margin: 10px auto;
+}
+.card-container:hover .flipper,
+.card-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+
+.card-container,
+.front-of-card,
+.back-of-card {
+	animation: load-cards 1s;
+	width: 550px;
+	height: 250px;
+	margin-top: 20px;
+}
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+.front-of-card,
+.back-of-card {
+	background-color: rgb(5, 68, 136);
+	color: white;
+	box-shadow: 0px 8px 16px 0px grey;
+	backface-visibility: hidden;
+	border: 2px solid black;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.front-of-card {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+.back-of-card {
+	transform: rotateY(180deg);
+}
+.question,
+.answer {
+	text-align: center;
+}
+.question {
+	margin-top: 17%;
+	font-size: 44px;
+}
+.answer {
+	font-size: 24px;
+	margin: 30px;
+}
+.greeting {
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	padding: 0 20px;
+}
+.rules {
+	font-size: 23px;
+	font-weight: bold;
+	text-align: center;
+	padding: 0 12px;
+}
+.score-buttons {
+	display: flex;
+	justify-content: center;
+}
+.moveOn {
+	display: flex;
+	justify-content: center;
+}
+.points {
+	display: flex;
+	justify-content: center;
+	font-size: 25px;
+	font-weight: bold;
+}
+.score {
+	display: flex;
+	font-size: 25px;
+	font-weight: bold;
+	height: 25px;
+	justify-content: center;
+}
+.digits {
+	padding-left: 15px;
+}
+.red {
+	color: red;
+}
+.green {
+	color: green;
+}
+button:active {
+	box-shadow: none;
+}
+.correct,
+.wrong,
+.previous,
+.next {
+	background-color: rgb(5, 68, 136);
+	border: 1px solid black;
+	color: white;
+	padding: 7px;
+	margin: 25px;
+	width: 120px;
+	border-radius: 3px;
+	box-shadow: 0px 8px 16px 0px grey;
+}
+.hidden {
+	display: none;
+}
+.mobile-drop {
+	width: 100%;
+	font-size: 46px;
+	background-color: #333;
+	border: 0.5px solid grey;
+	color: white;
+	padding-bottom: 6px;
+}
+.drop {
+	overflow: scroll;
+	height: 176px;
+	background-color: #dedede;
+}
+.mobileDD {
+	font-size: 30px;
+}
+.mobileDD:hover {
+	border: 1px solid grey;
+}
+@media screen and (min-width: 762px) {
+	.mobilenav {
+		display: none;
+	}
+}
+@media screen and (max-width: 761px) {
+	.navbar {
+		display: none;
+	}
+}
+@media screen and (max-width: 613px) {
+	.card-container,
+	.front-of-card,
+	.back-of-card {
+		width: 98%;
+	}
+	.easy,
+	.medium,
+	.hard {
+		width: 100%;
+	}
+	.difficulty {
+		margin-top: 27px;
+	}
+	.medium {
+		margin: 0 10px;
+	}
+}
+
+@media screen and (max-width: 493px) {
+	.greeting,
+	.question {
+		font-size: 31px;
+	}
+	.greeting {
+		margin-top: 15px;
+	}
+	.question {
+		margin-top: 21%;
+	}
+	.rules {
+		font-size: 19px;
+	}
+	.answer {
+		margin-top: 14px;
+		font-size: 21px;
+	}
+}
+@media screen and (max-width: 435px) {
+	.question {
+		font-size: 26px;
+		margin-top: 105px;
+	}
+}
+
+.correct:hover
+{
+	background-color: rgb(43, 4, 115);	
+}
+
+.wrong:hover
+{
+	background-color: rgb(43, 4, 115);	
+}
+
+.previous:hover
+{
+	background-color: rgb(43, 4, 115);	
+}
+
+.next:hover
+{
+	background-color: rgb(43, 4, 115);	
+}
+.quit
+{
+	background-color: rgb(101 109 119);
+	border: 1px solid black;
+	color: white;
+	padding: 7px;
+	margin: 25px;
+	width: 120px;
+	border-radius: 3px;
+	box-shadow: 0px 8px 16px 0px grey;
+	position: relative;
+	top: -20px;
+	left: 975px;
+}
+.quit:hover
+{
+	background-color: black;
+}
+table
+{
+	height: 400px;
+	width: 600px;
+	background-color:#f3f7f7;
+}
+th,td
+{
+	font-size: 35px;
+	text-align: center;
+}
+
